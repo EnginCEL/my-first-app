@@ -1,4 +1,14 @@
 <input type="text" [(ngModel)]="name" class="text-bg-primary" >
 <p>{{name}}</p>
-<button class="btn btn-primary"  [disabled]="allowNewServe">Add Server</button>
+<button class="btn btn-primary" (click)="OnCreatedServer()"  [disabled]="allowNewServe">Add Server</button>
+<p>{{ServerStatus}}</p>
+
+<div class="card" *ngFor="let post of posts">
+  <div class="card-header">
+    {{post.title}}
+  </div>
+  <div class="card-body">
+    <p class="card-text"> {{post.body}} </p>
+  </div>
+</div>
 
